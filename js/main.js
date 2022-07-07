@@ -1,24 +1,31 @@
-document.getElementById('purple').onclick = partyPurple
-document.getElementById('green').onclick = partyGreen
-document.getElementById('blue').onclick = partyBlue
-document.getElementById('clickme').onclick = changeColor
+const pickPurple = document.getElementById('purple');
+const pickGreen = document.getElementById('green');
+const pickBlue = document.getElementById('blue');
+const pickMe = document.getElementById('clickme');
+const pickBody = document.querySelector('body');
 
-function partyPurple() {
-  document.querySelector('body').style.backgroundColor = 'rgba(241,63,247,1)'
-  document.querySelector('body').style.color = 'white'
+pickPurple.addEventListener('click', changePurple);
+pickGreen.addEventListener('click', changeGreen);
+pickBlue.addEventListener('click', changeBlue);
+pickMe.addEventListener('click', changePickMe);
+
+function changePurple() {
+  console.log(pickBody);
+  pickBody.style.color = 'white';
+  pickBody.style.backgroundColor = 'rgba(241,63,247,1)';
 }
 
-function partyGreen() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,253,81,1)'
-  document.querySelector('body').style.color = 'white'
+function changeGreen() {
+  pickBody.style.color = 'white';
+  pickBody.style.backgroundColor = 'rgba(0,253,81,1)';
 }
 
-function partyBlue() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,254,255)'
-  document.querySelector('body').style.color = 'white'
+function changeBlue() {
+  pickBody.style.color = 'white';
+  pickBody.style.backgroundColor = 'rgba(0,254,255)';
 }
 
-function changeColor() {
-  document.querySelector('body').style.backgroundColor = '#FF5733';
-  document.querySelector('body').style.color = 'white';
+function changePickMe() {
+  pickBody.style.color = 'white';
+  pickBody.style.backgroundColor = '#FF5733';
 }
